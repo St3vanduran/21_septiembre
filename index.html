@@ -1,0 +1,901 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Flores amarillas para Valeria · 21 de septiembre</title>
+<meta name="description" content="Como todos los años, hoy te mando flores amarillas: 29 fotos para ti, Valeria.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0b1f18">
+
+<!-- Vista previa al compartir el enlace (WhatsApp, Telegram, etc.).
+     Cambia TU-USUARIO por tu usuario de GitHub (el repositorio se llama 21_sep):
+     estas direcciones tienen que ser completas (absolutas) para que la vista previa funcione. -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_LA">
+<meta property="og:title" content="Flores amarillas para Valeria · 21 de septiembre">
+<meta property="og:description" content="Como todos los años, hoy te mando flores amarillas.">
+<meta property="og:url" content="https://TU-USUARIO.github.io/21_sep/valeria.html">
+<meta property="og:image" content="https://TU-USUARIO.github.io/21_sep/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Una caléndula, un girasol y una mariposa monarca sobre flores amarillas">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fuentes/fraunces-numeros.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fuentes/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.className = "js";</script>
+
+<style>
+/* ============================================================
+   Tipografías (alojadas en la carpeta fuentes/, sin depender de internet)
+   ============================================================ */
+@font-face { font-family: "Fraunces Numeros"; src: url("fuentes/fraunces-numeros.woff2") format("woff2"); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Fraunces"; src: url("fuentes/fraunces-titulo.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Fraunces"; src: url("fuentes/fraunces-cursiva.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Figtree"; src: url("fuentes/figtree.woff2") format("woff2"); font-weight: 400 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Caveat"; src: url("fuentes/caveat.woff2") format("woff2"); font-weight: 500 700; font-style: normal; font-display: swap; }
+
+/* ============================================================
+   Colores y medidas
+   ============================================================ */
+:root {
+  --noche:    #0b1f18;   /* fondo: verde de hoja profunda */
+  --musgo:    #12302a;   /* superficies elevadas */
+  --girasol:  #ffc61a;   /* el amarillo */
+  --petalo:   #ffe58f;   /* amarillo suave */
+  --papel:    #ffe9a0;   /* papel de la tarjeta */
+  --calendula:#f79a2e;   /* naranja, solo en los pétalos */
+  --marfil:   #f6f1e2;   /* texto */
+  --bruma:    #9fb5a8;   /* texto secundario */
+  --tinta:    #143526;   /* tinta sobre el papel */
+
+  --f-num:     "Fraunces Numeros", "Iowan Old Style", Georgia, serif;
+  --f-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --f-texto:   "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-mano:    "Caveat", "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+
+  --margen: clamp(16px, 4vw, 48px);
+  --sep: clamp(6px, 0.9vw, 12px);          /* espacio entre fotos */
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scrollbar-gutter: stable; background: var(--noche); }
+html.visor-abierto { overflow: hidden; }
+body {
+  margin: 0;
+  background: var(--noche);
+  color: var(--marfil);
+  font: 400 1rem/1.6 var(--f-texto);
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; }
+::selection { background: var(--girasol); color: var(--tinta); }
+:focus-visible { outline: 3px solid var(--girasol); outline-offset: 3px; }
+button { font: inherit; color: inherit; }
+
+.salto-enlace {
+  position: absolute; left: 1rem; top: -4rem; z-index: 10;
+  padding: .6rem 1rem; background: var(--girasol); color: var(--tinta); font-weight: 600; text-decoration: none;
+}
+.salto-enlace:focus { top: 1rem; }
+
+/* ============================================================
+   Portada: el 21 hecho de flores + la tarjeta
+   ============================================================ */
+.portada {
+  position: relative; isolation: isolate; overflow: hidden;
+  padding: clamp(2.25rem, 5vw, 4.5rem) var(--margen) clamp(2.75rem, 5vw, 4.5rem);
+  background:
+    linear-gradient(to bottom, transparent 78%, var(--noche)),      /* funde la portada con el resto */
+    radial-gradient(60% 70% at 88% 6%, rgba(255, 198, 26, .20), transparent 62%),
+    radial-gradient(40% 50% at 0% 62%, rgba(247, 154, 46, .09), transparent 70%),
+    var(--noche);
+}
+.petalos { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+.portada-in {
+  position: relative; z-index: 1;
+  max-width: 1240px; margin-inline: auto;
+  display: grid; align-items: center;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+}
+
+.eyebrow {
+  display: flex; align-items: center; gap: .65rem;
+  margin: 0 0 clamp(.5rem, 2vw, 1.1rem);
+  font: 600 .78rem/1.3 var(--f-texto); letter-spacing: .18em; text-transform: uppercase;
+  color: var(--girasol);
+}
+.flor { width: 1.7rem; height: 1.7rem; flex: none; }
+
+.titulo { margin: 0; font-weight: 400; }
+.dia {
+  display: flex;
+  font: 900 clamp(11rem, 46vw, 24rem)/.8 var(--f-num);
+  letter-spacing: -.035em;
+  font-variant-numeric: lining-nums;
+  color: var(--girasol);                          /* respaldo si el navegador no recorta con texto */
+}
+.dia span { padding: .07em .012em .03em; }
+.dia span:nth-child(1) { --foto: url("miniaturas/20171122_090314-900.jpg"); --pos: 12% 50%; }
+.dia span:nth-child(2) { --foto: url("miniaturas/20171122_09031211-900.jpg"); --pos: 50% 50%; }
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .dia span {
+    background:
+      linear-gradient(rgba(255, 198, 26, .16), rgba(255, 198, 26, .16)),     /* aclara las zonas oscuras de la foto */
+      var(--foto) var(--pos) / cover no-repeat,
+      var(--girasol);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+  }
+}
+.mes {
+  display: block; margin-top: .12em;
+  font: italic 400 clamp(2.2rem, 6.6vw, 4.8rem)/1 var(--f-display);
+  color: var(--marfil);
+}
+.pie-fecha {
+  margin: clamp(.75rem, 2vw, 1.25rem) 0 0;
+  font: 500 .8rem/1.3 var(--f-texto); letter-spacing: .16em; text-transform: uppercase;
+  color: var(--bruma);
+}
+
+/* La tarjeta de florería */
+.tarjeta {
+  position: relative; justify-self: center;
+  width: 100%; max-width: 30rem;
+  padding: clamp(1.6rem, 3vw, 2.3rem) clamp(1.4rem, 3vw, 2.2rem) clamp(1.3rem, 2.4vw, 1.8rem);
+  background: var(--papel); color: var(--tinta);
+  border-radius: 2px;
+  rotate: 1.6deg;
+  box-shadow: 0 22px 40px -14px rgba(0, 0, 0, .6), 0 3px 8px rgba(0, 0, 0, .35);
+}
+.tarjeta::before {                                 /* cinta adhesiva */
+  content: ""; position: absolute; top: -13px; left: 50%;
+  width: 104px; height: 28px; translate: -50% 0; rotate: -3deg;
+  background: rgba(246, 241, 226, .62);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .18);
+}
+.tarjeta p { margin: 0; font-family: var(--f-mano); }
+.para { font-size: clamp(1.9rem, 3.2vw, 2.4rem); font-weight: 700; line-height: 1.1; margin-bottom: .55rem !important; overflow-wrap: anywhere; }
+.para span { border-bottom: 3px solid rgba(20, 53, 38, .28); }
+.mensaje { font-size: clamp(1.5rem, 2.3vw, 1.85rem); font-weight: 500; line-height: 1.28; }
+.mensaje + .mensaje { margin-top: .7rem !important; }
+.firma { margin-top: 1rem !important; text-align: right; font: 700 2.1rem/1 var(--f-mano); }
+.firma small { display: block; margin-top: .2rem; font-size: 1.45rem; font-weight: 500; }
+
+/* ============================================================
+   El ramo (galería)
+   ============================================================ */
+.ramo { max-width: 1600px; margin-inline: auto; padding: clamp(2.5rem, 6vw, 5rem) var(--margen) 0; }
+.ramo-cab {
+  display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;
+  gap: .75rem 2.5rem; margin-bottom: clamp(1.25rem, 3vw, 2.25rem);
+}
+.ramo-cab h2 { margin: 0; font: 600 clamp(2.2rem, 4.6vw, 3.5rem)/1 var(--f-display); letter-spacing: -.01em; }
+.ramo-nota { margin: 0; max-width: 33rem; color: var(--bruma); font-size: .975rem; }
+.ramo-nota strong { color: var(--marfil); font-weight: 600; }
+
+/* Sin JavaScript: filas justificadas con flexbox */
+.galeria { --fila: 210px; display: flex; flex-wrap: wrap; gap: var(--sep); margin: 0; padding: 0; list-style: none; }
+.galeria::after { content: ""; flex-grow: 1000000; }
+.foto {
+  position: relative; overflow: hidden; border-radius: 3px;
+  flex-grow: calc(var(--ar) * 100); flex-basis: calc(var(--ar) * var(--fila));
+  background-color: var(--musgo);
+}
+.foto::before { content: ""; display: block; padding-bottom: calc(100% / var(--ar)); }
+@media (min-width: 600px)  { .galeria { --fila: 240px; } }
+@media (min-width: 900px)  { .galeria { --fila: 280px; } }
+@media (min-width: 1300px) { .galeria { --fila: 320px; } }
+
+/* Con JavaScript: las filas se calculan para que todas queden parejas */
+.js .galeria { column-gap: var(--sep); row-gap: 0; margin-bottom: calc(var(--sep) * -1); }
+.js .galeria::after { display: none; }
+.js .galeria:not(.lista) { visibility: hidden; }
+.js .foto { flex: var(--ar) 1 0; min-width: 0; margin-bottom: var(--sep); }
+.js .foto::before { display: none; }
+.js .salto { flex: 0 0 100%; height: 0; margin: 0; padding: 0; }
+.galeria .salto { display: none; }
+.js .galeria .salto { display: block; }
+
+.foto a { position: absolute; inset: 0; display: block; cursor: zoom-in; }
+.foto a::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .07); pointer-events: none; transition: box-shadow .3s; }
+.foto a:focus-visible { outline-offset: -4px; }
+.foto img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2, .7, .2, 1), opacity .7s ease; }
+.js .foto img { opacity: 0; }
+.js .foto img.cargada { opacity: 1; }
+@media (hover: hover) {
+  .foto a:hover img { transform: scale(1.045); }
+  .foto a:hover::after { box-shadow: inset 0 0 0 2px rgba(255, 198, 26, .85); }
+}
+
+/* ============================================================
+   Cierre
+   ============================================================ */
+.cierre {
+  position: relative;
+  max-width: 1600px; margin: clamp(3.5rem, 8vw, 7rem) auto 0;
+  padding: clamp(2.5rem, 6vw, 4.5rem) var(--margen) calc(clamp(2.5rem, 6vw, 4.5rem) + env(safe-area-inset-bottom, 0px));
+  display: grid; align-items: end; gap: 2rem clamp(2rem, 6vw, 6rem);
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+}
+.cierre::before {                                  /* línea fina alineada con las fotos */
+  content: ""; position: absolute; top: 0; left: var(--margen); right: var(--margen);
+  height: 1px; background: rgba(246, 241, 226, .14);
+}
+.cierre-titulo { margin: 0; font: italic 400 clamp(2.8rem, 8.4vw, 6.8rem)/.95 var(--f-display); color: var(--girasol); text-wrap: balance; }
+.cierre-lado { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
+.flor.grande { width: 3.4rem; height: 3.4rem; }
+.cierre-texto { margin: 0; max-width: 24rem; font-size: clamp(1.15rem, 1.6vw, 1.4rem); line-height: 1.45; }
+.cierre .firma { margin: .25rem 0 0 !important; text-align: left; color: var(--petalo); font-size: 2.5rem; }
+
+@media (min-width: 860px) {
+  .dia { font-size: clamp(11rem, 30vw, 25rem); }
+}
+@media (max-width: 859px) {
+  .portada-in { grid-template-columns: 1fr; }
+  .tarjeta { justify-self: start; margin-top: .75rem; }
+  .cierre { grid-template-columns: 1fr; }
+}
+@media (min-width: 560px) and (max-width: 859px) {
+  .tarjeta { justify-self: end; margin-top: -1.5rem; }
+}
+
+/* ============================================================
+   Visor de fotos
+   ============================================================ */
+.visor {
+  position: fixed; inset: 0; margin: 0; padding: 0;
+  width: 100%; height: 100%; max-width: none; max-height: none;
+  border: 0; overflow: hidden; overscroll-behavior: contain;
+  background: rgba(4, 12, 9, .97); color: var(--marfil);
+}
+.visor[open] { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; }
+.visor::backdrop { background: rgba(4, 12, 9, .9); }
+
+.visor-barra {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: max(12px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) 8px max(16px, env(safe-area-inset-left, 0px));
+}
+.visor-cuenta { margin: 0; font: 500 .9rem/1 var(--f-texto); letter-spacing: .06em; color: var(--bruma); font-variant-numeric: tabular-nums; }
+.visor-cuenta b { color: var(--marfil); font-weight: 600; }
+.visor-acciones { display: flex; align-items: center; gap: .5rem; }
+
+.boton {
+  display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+  min-width: 44px; height: 44px; padding: 0 .95rem;
+  border: 1px solid rgba(246, 241, 226, .2); border-radius: 999px;
+  background: rgba(18, 48, 42, .7); color: var(--marfil);
+  font: 600 .875rem/1 var(--f-texto); text-decoration: none; cursor: pointer;
+  transition: background-color .2s, color .2s, border-color .2s;
+}
+.boton svg { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.boton.solo-icono { padding: 0; width: 44px; }
+@media (hover: hover) { .boton:hover { background: var(--girasol); border-color: var(--girasol); color: var(--tinta); } }
+.boton:active { background: var(--girasol); color: var(--tinta); }
+
+.visor-escena { position: relative; min-height: 0; overflow: hidden; touch-action: pan-y pinch-zoom; }
+.visor-escena img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: contain; cursor: zoom-in; user-select: none; -webkit-user-drag: none;
+}
+.visor-escena img.nueva { animation: aparecer .3s ease both; }
+.visor-escena.ampliada { display: flex; overflow: auto; touch-action: auto; scrollbar-width: thin; scrollbar-color: rgba(246, 241, 226, .35) transparent; }
+.visor-escena.ampliada img { position: static; flex: none; width: var(--zw); height: var(--zh); max-width: none; margin: auto; object-fit: fill; cursor: zoom-out; }
+.visor-escena.arrastrando img { cursor: grabbing; }
+.visor-escena.sin-zoom img { cursor: default; }
+
+.flecha { position: absolute; top: 50%; translate: 0 -50%; z-index: 2; }
+.flecha.prev { left: max(10px, env(safe-area-inset-left, 0px)); }
+.flecha.next { right: max(10px, env(safe-area-inset-right, 0px)); }
+
+.visor-pie {
+  position: relative; display: flex; flex-direction: column; align-items: center; gap: .35rem;
+  padding: 12px 16px max(14px, env(safe-area-inset-bottom, 0px));
+  font-size: .8125rem; color: var(--bruma); text-align: center;
+}
+.visor-estado { margin: 0; min-height: 1.3em; }
+.visor-estado[data-estado="original"] { color: var(--petalo); }
+.visor-estado[data-estado="error"] { color: var(--calendula); }
+.visor-estado[data-estado="original"]::before {
+  content: ""; display: inline-block; width: .5em; height: .5em; margin-right: .55em;
+  border-radius: 50%; background: var(--girasol); vertical-align: .08em;
+}
+.visor-carga {
+  position: absolute; left: 0; right: 0; top: 0; height: 2px; opacity: 0;
+  background: linear-gradient(90deg, transparent, var(--girasol), transparent) 0 0 / 40% 100% no-repeat;
+}
+.visor-pie[data-cargando] .visor-carga { opacity: 1; animation: barrer 1.15s linear infinite; }
+.solo-lector { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+@media (max-width: 559px) {
+  .boton .texto { display: none; }
+  .boton.descargar { padding: 0; width: 44px; }
+  .flecha { display: none; }
+}
+
+@keyframes aparecer { from { opacity: 0; } to { opacity: 1; } }
+@keyframes barrer { from { background-position: -60% 0; } to { background-position: 160% 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+</style>
+</head>
+
+<body>
+<!-- Flor reutilizable (viñeta) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="flor" viewBox="0 0 32 32">
+    <g fill="#ffc61a">
+      <ellipse id="petalo" cx="16" cy="8" rx="3.3" ry="6.6"/>
+      <use href="#petalo" transform="rotate(45 16 16)"/>
+      <use href="#petalo" transform="rotate(90 16 16)"/>
+      <use href="#petalo" transform="rotate(135 16 16)"/>
+      <use href="#petalo" transform="rotate(180 16 16)"/>
+      <use href="#petalo" transform="rotate(225 16 16)"/>
+      <use href="#petalo" transform="rotate(270 16 16)"/>
+      <use href="#petalo" transform="rotate(315 16 16)"/>
+    </g>
+    <circle cx="16" cy="16" r="4.2" fill="#0b1f18"/>
+  </symbol>
+</svg>
+
+<a class="salto-enlace" href="#ramo">Ir a las fotos</a>
+
+<header class="portada">
+  <canvas class="petalos" aria-hidden="true"></canvas>
+  <div class="portada-in">
+    <div class="fecha">
+      <p class="eyebrow"><svg class="flor" aria-hidden="true"><use href="#flor"/></svg>Día de regalar flores amarillas</p>
+      <h1 class="titulo">
+        <span class="dia"><span>2</span><span>1</span></span>
+        <span class="mes">de septiembre</span>
+      </h1>
+      <p class="pie-fecha">Lunes · 2026</p>
+    </div>
+
+    <!-- Aquí puedes cambiar el mensaje a tu gusto -->
+    <aside class="tarjeta" aria-label="Mensaje para Valeria">
+      <p class="para">Para <span id="para">Valeria</span>,</p>
+      <p class="mensaje">Como todos los años, hoy te mando flores amarillas. Este año no quería que fuera diferente.</p>
+      <p class="mensaje">Aunque por mi culpa estemos un poquito distanciados, eso no significa que hayas dejado de importarme.</p>
+      <p class="mensaje">Siempre vas a ser una persona muy importante para mí.</p>
+      <p class="mensaje">Feliz 21 de septiembre.</p>
+      <p class="firma">con cariño<small data-de hidden></small></p>
+    </aside>
+  </div>
+</header>
+
+<main>
+  <section class="ramo" id="ramo" aria-labelledby="ramo-titulo">
+    <div class="ramo-cab">
+      <h2 id="ramo-titulo">El ramo</h2>
+      <p class="ramo-nota"><strong><span data-total>29</span> fotos.</strong> Toca una para verla en su calidad original. Si alguna te gusta, descárgala y llévatela.</p>
+    </div>
+
+    <ul class="galeria" role="list">
+      <!-- GALERIA:INICIO -->
+      <li class="foto" style="--ar:0.7527;background:#776912 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAYABIDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAIEBQED/8QAJBAAAgIBBAIBBQAAAAAAAAAAAQIDEQAEEiFBEzFRBQYiYZH/xAAYAQACAwAAAAAAAAAAAAAAAAACBAEDBf/EAB4RAAEDBAMAAAAAAAAAAAAAAAABAxECEhMiMlFS/9oADAMBAAIRAxEAPwDrA6cKz7UdiqBXBqyfYq+fjr5z0glRZPDMiO8H5Eiiee6ylJLIg3K4gZhuskEMSeeTkIdfJqJGR5IlCi2KAKx/uZMVLsMRSiQaTaOFmJ8bizdW3GMqH7h0qHa0chI4JHrGTkf8AY2+zN+pkhreff2Bt6PoV1meXHDUATwDV3jGNMpqgDnIh5ohwQ9/o4xjL7UAg//Z) center/cover">
+        <a href="IMG/20171122_0.jpg" data-med="miniaturas/20171122_0-1800.jpg" data-w="4480" data-h="5952" data-mb="2.38">
+          <img src="miniaturas/20171122_0-900.jpg" srcset="miniaturas/20171122_0-900.jpg 677w, miniaturas/20171122_0-1800.jpg 1355w" sizes="(max-width: 599px) 45vw, (max-width: 899px) 217px, (max-width: 1299px) 253px, 289px" width="4480" height="5952" alt="Mariposa monarca posada entre rudbeckias amarillas de centro oscuro" fetchpriority="high" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:0.6667;background:#513d06 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAYABADASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIGBAX/xAAmEAACAQMCBAcAAAAAAAAAAAABAgMABBEFEgYTMUEhMmFxgdHx/8QAFQEBAQAAAAAAAAAAAAAAAAAABAX/xAAcEQACAgIDAAAAAAAAAAAAAAABEQADAiESE0H/2gAMAwEAAhEDEQA/AJVUkmuCIlMkjHIwtdaz5dpaNFdq0UgJJDr5/un4aCqtwcDnYGPb9rZr+19JJl2iUFdvoc9vip9trsFS1qJrwOOPYJMRTC3YSQyusobwK9MU091LcjdcStIR0B7UUU3iG/YZlKf/2Q==) center/cover">
+        <a href="IMG/20171122_0903121.jpg" data-med="miniaturas/20171122_0903121-1800.jpg" data-w="4000" data-h="6000" data-mb="2.56">
+          <img src="miniaturas/20171122_0903121-900.jpg" srcset="miniaturas/20171122_0903121-900.jpg 600w, miniaturas/20171122_0903121-1800.jpg 1200w" sizes="(max-width: 599px) 44vw, (max-width: 899px) 192px, (max-width: 1299px) 224px, 256px" width="4000" height="6000" alt="Caléndula naranja con gotas de rocío" fetchpriority="high" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:1.5000;background:#594d16 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAQABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABQACBP/EACYQAAIABQMCBwAAAAAAAAAAAAECAAMEERIFEyFBYRQiMVGBscH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABwRAAEFAAMAAAAAAAAAAAAAAAEAAgMRITFRYf/aAAwDAQACEQMRAD8AHp6VJrlGZVBbktHV4HTp7PSJMO4pJBBPH5B9FXGnqknYNYCzL7j5hbLTE3NQkscnNrNcLc+o7RDOXh2X5XaaMNrURVFVbbVAzp5Txwbde0UaqMp9RPJYqScgOhHQfUUUtOahPK//2Q==) center/cover">
+        <a href="IMG/20171122_0903127.jpg" data-med="miniaturas/20171122_0903127-1800.jpg" data-w="6000" data-h="4000" data-mb="2.35">
+          <img src="miniaturas/20171122_0903127-900.jpg" srcset="miniaturas/20171122_0903127-900.jpg 900w, miniaturas/20171122_0903127-1800.jpg 1800w" sizes="(max-width: 599px) 90vw, (max-width: 899px) 432px, (max-width: 1299px) 504px, 576px" width="6000" height="4000" alt="Girasol de pétalos dorados y centro oscuro" fetchpriority="high" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:0.6667;background:#5d4d14 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAYABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQAE/8QAJBAAAgEDAwMFAAAAAAAAAAAAAQIDAAQRBRIhMVFhFCJBccH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABsRAAICAwEAAAAAAAAAAAAAAAECABEDIkEx/9oADAMBAAIRAxEAPwAvT/SxWmZChmc44JJPPbx81qjsGQNLckEh23ZHB6YP1ih7OW4tpBNbhhwRu28EUzNqKywRrHbrPKykuG6IfI81BmV1bXsZGU+8gMcrACNpXWIn3AH8pDTrm2iEhmcrlwFyM8d6qqrdAwowgaNz/9k=) center/cover">
+        <a href="IMG/20171122_090.jpg" data-med="miniaturas/20171122_090-1800.jpg" data-w="4000" data-h="6000" data-mb="3.50">
+          <img src="miniaturas/20171122_090-900.jpg" srcset="miniaturas/20171122_090-900.jpg 600w, miniaturas/20171122_090-1800.jpg 1200w" sizes="(max-width: 599px) 44vw, (max-width: 899px) 192px, (max-width: 1299px) 224px, 256px" width="4000" height="6000" alt="Lirios amarillos y sus botones sobre un fondo oscuro" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:0.5625;background:#434502 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAYAA0DASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUEBv/EACIQAAEDAwQDAQAAAAAAAAAAAAECAwQAERIFITFBE1Fxwf/EABYBAQEBAAAAAAAAAAAAAAAAAAIEBf/EABkRAAMBAQEAAAAAAAAAAAAAAAABAgMRIf/aAAwDAQACEQMRAD8AjM6XKlt+RtFkngk2BrJIjrYXg8kpUOv2uhhamy7FQArHFO4vwfVSdXnNS5CS3jZItlzes/LTR2014KolT1MjrIyslVwO6Em+2/2lKuAf/9k=) center/cover">
+        <a href="IMG/20171012_112511.jpg" data-med="miniaturas/20171012_112511-1800.jpg" data-w="2322" data-h="4128" data-mb="0.70">
+          <img src="miniaturas/20171012_112511-900.jpg" srcset="miniaturas/20171012_112511-900.jpg 506w, miniaturas/20171012_112511-1800.jpg 1012w" sizes="(max-width: 599px) 44vw, (max-width: 899px) 162px, (max-width: 1299px) 189px, 216px" width="2322" height="4128" alt="Diente de león abierto sobre el pasto" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:1.5040;background:#938540 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAQABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUBBAb/xAAkEAACAQMDAwUAAAAAAAAAAAABAgMABBEFEhMhMWEiUXGx8f/EABYBAQEBAAAAAAAAAAAAAAAAAAMEBf/EABsRAAIDAAMAAAAAAAAAAAAAAAECAAMREiIx/9oADAMBAAIRAxEAPwAukbUNQ4gVPMd5JXqq/lMEt7KLIS3Tb56/dXryylS8SaFC/pxuwMgZzj4pRd6hCiz5t3SYdShPfPse1Z19bg9fI1JQbymf1KyaG8ZIgSjLyIfFFTfyNKvPNIyzYACqewIyKKpQMFGwmwk5P//Z) center/cover">
+        <a href="IMG/20171122_0903123.jpg" data-med="miniaturas/20171122_0903123-1800.jpg" data-w="6016" data-h="4000" data-mb="3.18">
+          <img src="miniaturas/20171122_0903123-900.jpg" srcset="miniaturas/20171122_0903123-900.jpg 900w, miniaturas/20171122_0903123-1800.jpg 1800w" sizes="(max-width: 599px) 90vw, (max-width: 899px) 433px, (max-width: 1299px) 505px, 578px" width="6016" height="4000" alt="Rosa de tono amarillo anaranjado entre hojas brillantes" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:1.0000;background:#6b751e url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAYABgDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAMEBQH/xAAiEAACAQQBBQEBAAAAAAAAAAABAgADBBESIQUTMUFRIvD/xAAXAQADAQAAAAAAAAAAAAAAAAAAAwQF/8QAGREAAwEBAQAAAAAAAAAAAAAAAAECAxEx/9oADAMBAAIRAxEAPwCwbVLcrVJ2wp8/Mep2rah1K9klCMg7eDKdjetV6mc1dqZBCqTgH+5msXPgkBccCYu11nSQzHKbnrMG5vKSK6baso1AUHIOeOYkHVLcVb2rVpOpUYLHI49GJfmpcpsnuGmULa4RKqmqoZRzjElbrN3oqB8Yzzge4iPec16glufCK1SrXFTspsQCXZj+QD9iIh3jGLw//9k=) center/cover">
+        <a href="IMG/20171122_09.jpg" data-med="miniaturas/20171122_09-1800.jpg" data-w="6000" data-h="6000" data-mb="1.53">
+          <img src="miniaturas/20171122_09-900.jpg" srcset="miniaturas/20171122_09-900.jpg 900w, miniaturas/20171122_09-1800.jpg 1800w" sizes="(max-width: 599px) 60vw, (max-width: 899px) 288px, (max-width: 1299px) 336px, 384px" width="6000" height="6000" alt="Flor amarilla de pétalos redondeados y centro naranja sobre un fondo verde" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:0.7529;background:#373b08 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAYABIDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAIDBAUG/8QAIxAAAgEEAgICAwAAAAAAAAAAAQIDAAQRIRIxBRMGcUFhof/EABcBAAMBAAAAAAAAAAAAAAAAAAACAwT/xAAdEQABAwUBAAAAAAAAAAAAAAAAAQIRAxITIWEx/9oADAMBAAIRAxEAPwDyYjZ8xxgl26UDZrVLbyW5AlilQcRt1I3jqur8bmtbeOZ5ePvDaLd8cfirfK+Vtrvw775MzAIp7Vs/zWawurvyWo3Q6MS2ZOUqWfEZWcHG9ClZObjXKlXx9UldwhcSwvMTCjJHgAAnf3UWYEdDP3SlUiNAvpX7P21KUpoGhD//2Q==) center/cover">
+        <a href="IMG/20171122_09031255.jpg" data-med="miniaturas/20171122_09031255-1800.jpg" data-w="3072" data-h="4080" data-mb="0.77">
+          <img src="miniaturas/20171122_09031255-900.jpg" srcset="miniaturas/20171122_09031255-900.jpg 678w, miniaturas/20171122_09031255-1800.jpg 1355w" sizes="(max-width: 599px) 45vw, (max-width: 899px) 217px, (max-width: 1299px) 253px, 289px" width="3072" height="4080" alt="Flor amarilla esponjosa, como un pompón, entre hojas oscuras" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:1.5000;background:#605a26 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAQABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAACA//EACMQAAEDAwMFAQAAAAAAAAAAAAECAxEABBIhIjEFE0FRYdH/xAAVAQEBAAAAAAAAAAAAAAAAAAACBP/EABsRAAICAwEAAAAAAAAAAAAAAAECABEDEiEx/9oADAMBAAIRAxEAPwAOHcQu3yDTijv5GIEzPiIiKC9bLt9riFFMDFYSRJ/aazftNuFx8KKzqDiDOkV2d6sha04SQpPPCiPYHAM1GDlRqUWI20cdNQVzZ27NshSFS4QCd2v2R4qrd52Lhk3SVnJQ0TI8e/pqqnAbXvsL0DP/2Q==) center/cover">
+        <a href="IMG/20171122_09031222.jpg" data-med="miniaturas/20171122_09031222-1800.jpg" data-w="5760" data-h="3840" data-mb="2.25">
+          <img src="miniaturas/20171122_09031222-900.jpg" srcset="miniaturas/20171122_09031222-900.jpg 900w, miniaturas/20171122_09031222-1800.jpg 1800w" sizes="(max-width: 599px) 90vw, (max-width: 899px) 432px, (max-width: 1299px) 504px, 576px" width="5760" height="3840" alt="Racimo de rudbeckias amarillas de centro negro entre hojas verdes" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:1.5000;background:#55450b url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAQABgDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGA//EACQQAAIBAwMDBQAAAAAAAAAAAAECAwAEEQUTMQYSIRVBUXGB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwQF/8QAHBEAAgICAwAAAAAAAAAAAAAAAAECAxESBCEx/9oADAMBAAIRAxEAPwCatoHuZkhjVi7nlRkge5xTtunlWHb3QZuSwGPH1STT5hBcrMVJCHOFbGf2qj1rT2TfXIYjtOV8j4rP5MrYtaeD1qDzsSkkMkMrJIXVlNFbXNwZpHkCBe5ixA4oqtN47BZ//9k=) center/cover">
+        <a href="IMG/20171122_0903126.jpg" data-med="miniaturas/20171122_0903126-1800.jpg" data-w="6000" data-h="4000" data-mb="1.59">
+          <img src="miniaturas/20171122_0903126-900.jpg" srcset="miniaturas/20171122_0903126-900.jpg 900w, miniaturas/20171122_0903126-1800.jpg 1800w" sizes="(max-width: 599px) 90vw, (max-width: 899px) 432px, (max-width: 1299px) 504px, 576px" width="6000" height="4000" alt="Flor amarilla brillante entre hojas verdes" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:0.6667;background:#c2a32a url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAYABADASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgMF/8QAIhAAAgICAgICAwAAAAAAAAAAAQIDEQAEITESQQVRFBUi/8QAFgEBAQEAAAAAAAAAAAAAAAAABAMF/8QAGhEAAgMBAQAAAAAAAAAAAAAAAREAAhIhUf/aAAwDAQACEQMRAD8A66yqjSLI3IF11xlJZkURq5RfMUATZOZ6ERWDzkUmU/yQR0PXeTtNDEhbZCFPVCyDmFkaQi3xxb9gPyH1w4uqFmrPHv7xH5DYk2nOrBTqoF89n7JwwxVaCpY8k2bcn//Z) center/cover">
+        <a href="IMG/20171122_090314.jpg" data-med="miniaturas/20171122_090314-1800.jpg" data-w="3456" data-h="5184" data-mb="1.41">
+          <img src="miniaturas/20171122_090314-900.jpg" srcset="miniaturas/20171122_090314-900.jpg 600w, miniaturas/20171122_090314-1800.jpg 1200w" sizes="(max-width: 599px) 44vw, (max-width: 899px) 192px, (max-width: 1299px) 224px, 256px" width="3456" height="5184" alt="Racimo de flores amarillas tipo margarita" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:0.5625;background:#644c02 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAYAA0DASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQGBf/EACIQAAIBAwQCAwAAAAAAAAAAAAECAwAEEQUSIWETQSMxwf/EABUBAQEAAAAAAAAAAAAAAAAAAAME/8QAGxEAAgIDAQAAAAAAAAAAAAAAAQIAAxEhMVH/2gAMAwEAAhEDEQA/AJ/StIW/gmkeUoEIUYHvulb6wNnMIy+445OMVWJbp4y1gsYjJ5MX02P2p7WHZrv5GO4DnqoKr2ew715HNYC5jmi66ltbi3nRmRc7WX11WRfO89y8rcbySADnAoop1rVHLAdhFiRif//Z) center/cover">
+        <a href="IMG/20171122_090312.jpg" data-med="miniaturas/20171122_090312-1800.jpg" data-w="2322" data-h="4128" data-mb="0.55">
+          <img src="miniaturas/20171122_090312-900.jpg" srcset="miniaturas/20171122_090312-900.jpg 506w, miniaturas/20171122_090312-1800.jpg 1012w" sizes="(max-width: 599px) 44vw, (max-width: 899px) 162px, (max-width: 1299px) 189px, 216px" width="2322" height="4128" alt="Flor amarilla grande sobre un fondo negro" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:1.5000;background:#5b4a0b url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAQABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQCBQb/xAAkEAACAQQBAgcAAAAAAAAAAAABAgQAAxEhEjFBBRMjUWFxgf/EABUBAQEAAAAAAAAAAAAAAAAAAAME/8QAHBEAAgEFAQAAAAAAAAAAAAAAAAIhAQMREkEx/9oADAMBAAIRAxEAPwDJxo7X+SqG56xrX6e1XsCw1iGiyY5QMSGLJ1+/alfCXaMr5uBATnPc9t/FOSZi3/TDabRJGRUN1mZteDJilM9ISbcPy2ForbXj0z13RScxlFxrilSRgccYopLaRDBu0+H/2Q==) center/cover">
+        <a href="IMG/20171122_090318.jpg" data-med="miniaturas/20171122_090318-1800.jpg" data-w="5472" data-h="3648" data-mb="2.91">
+          <img src="miniaturas/20171122_090318-900.jpg" srcset="miniaturas/20171122_090318-900.jpg 900w, miniaturas/20171122_090318-1800.jpg 1800w" sizes="(max-width: 599px) 90vw, (max-width: 899px) 432px, (max-width: 1299px) 504px, 576px" width="5472" height="3648" alt="Flores doradas de muchos pétalos con el fondo desenfocado" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:0.6584;background:#29421e url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAYABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMGBf/EACcQAAICAgECBAcAAAAAAAAAAAECAxEABBIhQQUTIjFCUWFxkcHR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/xAAdEQACAgEFAAAAAAAAAAAAAAABAgASQQMRITFh/9oADAMBAAIRAxEAPwCXh1WnRVUqootbHof5iWRUteYIuvt88pYdaCaF4tGBnmqg1elFIF2T398xtvw5YZRHG7u9HmGSuDdhf7yK6oLFejB7iP0d7a1TsHXYHlV8j0/GLn3Dsxjz2YsL5V8f1vDDKUUG23MDEk1wJ//Z) center/cover">
+        <a href="IMG/20171122_090312E.jpg" data-med="miniaturas/20171122_090312E-1800.jpg" data-w="3655" data-h="5551" data-mb="2.76">
+          <img src="miniaturas/20171122_090312E-900.jpg" srcset="miniaturas/20171122_090312E-900.jpg 593w, miniaturas/20171122_090312E-1800.jpg 1185w" sizes="(max-width: 599px) 44vw, (max-width: 899px) 190px, (max-width: 1299px) 221px, 253px" width="3655" height="5551" alt="Flores amarillas entre hojas verdes brillantes" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:0.5625;background:#537417 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAYAA0DASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIDBf/EACQQAAICAQMCBwAAAAAAAAAAAAECAAMREiFBBDETIkJRcYGh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAF/8QAGBEBAQEBAQAAAAAAAAAAAAAAAREAITH/2gAMAwEAAhEDEQA/AOfUUDOhJUMMexP1Ca1yKz25PM06TqFWuxfB82N3HzsJVpN2CXRSONO35M+tcIBboZEVgaXZkB9QPeRZQXbULGTPAERLvmC13//Z) center/cover">
+        <a href="IMG/20171122_0903.jpg" data-med="miniaturas/20171122_0903-1800.jpg" data-w="2268" data-h="4032" data-mb="1.18">
+          <img src="miniaturas/20171122_0903-900.jpg" srcset="miniaturas/20171122_0903-900.jpg 506w, miniaturas/20171122_0903-1800.jpg 1012w" sizes="(max-width: 599px) 44vw, (max-width: 899px) 162px, (max-width: 1299px) 189px, 216px" width="2268" height="4032" alt="Flor amarilla de pétalos finos en lo alto de un tallo" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:1.8064;background:#803d03 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAANABgDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBAgQF/8QAIxAAAgICAQIHAAAAAAAAAAAAAQIDEQASIQQTFCJBUWFx8P/EABcBAAMBAAAAAAAAAAAAAAAAAAADBAX/xAAbEQEAAgIDAAAAAAAAAAAAAAABABEhMSJBQv/aAAwDAQACEQMRAD8A5XhoWUwnQ7G11FFR7fOPMSy7bRSr2bVVsDuZni2KxMpCkt5uL2yhmZ+tkSQllu6Brn8MzqXuXvHNbi59unNCHbtjg+ov6wyEcdRGs7oAwJFA8YY0rSQp8s//2Q==) center/cover">
+        <a href="IMG/20171122.jpg" data-med="miniaturas/20171122-1800.jpg" data-w="6205" data-h="3435" data-mb="1.77">
+          <img src="miniaturas/20171122-900.jpg" srcset="miniaturas/20171122-900.jpg 900w, miniaturas/20171122-1800.jpg 1800w" sizes="(max-width: 599px) 92vw, (max-width: 899px) 520px, (max-width: 1299px) 607px, 694px" width="6205" height="3435" alt="Flores naranjas de centro negro y pétalos largos y delgados" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:0.7529;background:#796d2b url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAYABIDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAUEAgP/xAAjEAACAgICAQQDAAAAAAAAAAABAgADBBESIQUTIjFBMmGx/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwQC/8QAHxEAAgICAQUAAAAAAAAAAAAAAQIAEQMTBBQhQVHw/9oADAMBAAIRAxEAPwCD6rZOkI2SNkgTRjXNb5Gt8y8isaHID8QPjWvqbvHYVVVLZFigsO1PLsT3qTGyCFfGq9o9p1uRtylViKuptcJYXKy3ZwUaXEca6bmRv96+ok589ldlGNcQDrYSJX1Ce4WppP8AEZjUF6shww7PI/ybFyKaVDCtUbrmg+RuIkTYEZrPmOmRh2nJfx7ksTVs9/BiIjjEvxMzsM//2Q==) center/cover">
+        <a href="IMG/2022-07-31-120458677.jpg" data-med="miniaturas/2022-07-31-120458677-1800.jpg" data-w="3072" data-h="4080" data-mb="0.41">
+          <img src="miniaturas/2022-07-31-120458677-900.jpg" srcset="miniaturas/2022-07-31-120458677-900.jpg 678w, miniaturas/2022-07-31-120458677-1800.jpg 1355w" sizes="(max-width: 599px) 45vw, (max-width: 899px) 217px, (max-width: 1299px) 253px, 289px" width="3072" height="4080" alt="Flor amarilla de centro texturizado y pétalos anchos" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:0.7501;background:#49472d url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAYABIDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAMFBgIE/8QAJhAAAQQABQMFAQAAAAAAAAAAAQACAxEEBRITIVFhcSIxMkGh0f/EABcBAAMBAAAAAAAAAAAAAAAAAAECAwD/xAAZEQADAQEBAAAAAAAAAAAAAAAAERIBIQL/2gAMAwEAAhEDEQA/AKEsbJiHHENcGhtnSoCadpaBQ6jk+VtM2bAJmTEAOANkGqCy+YuiqTZ9Qujx8a7qFT7gM8Z49qR3NjnlFDuyfRNIqIVFvmcuLjkJll1gghpA48V1VVI5xBDSQ13uP6iI7nWOcX2/URFgI//Z) center/cover">
+        <a href="IMG/IMG_20220605_125111-01.jpeg" data-med="miniaturas/IMG_20220605_125111-01-1800.jpg" data-w="3464" data-h="4618" data-mb="1.82">
+          <img src="miniaturas/IMG_20220605_125111-01-900.jpg" srcset="miniaturas/IMG_20220605_125111-01-900.jpg 675w, miniaturas/IMG_20220605_125111-01-1800.jpg 1350w" sizes="(max-width: 599px) 45vw, (max-width: 899px) 216px, (max-width: 1299px) 252px, 288px" width="3464" height="4618" alt="Racimo de flores amarillo anaranjado con fondo oscuro" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:1.5000;background:#1b2317 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAQABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAADBv/EACAQAAICAgICAwAAAAAAAAAAAAECAAMRQSExEhMiUWH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAwDAQACEQMRAD8A5OnxCsWx1xkdn8i7FsWtVwq1kj5Z3iFoYpYGrcK2i0Sl/rrsDFWXkeJ6JO5N0D30itFIsVs/Upi5OznmUYH/2Q==) center/cover">
+        <a href="IMG/20171122_0903120.jpg" data-med="miniaturas/20171122_0903120-1800.jpg" data-w="6720" data-h="4480" data-mb="4.45">
+          <img src="miniaturas/20171122_0903120-900.jpg" srcset="miniaturas/20171122_0903120-900.jpg 900w, miniaturas/20171122_0903120-1800.jpg 1800w" sizes="(max-width: 599px) 90vw, (max-width: 899px) 432px, (max-width: 1299px) 504px, 576px" width="6720" height="4480" alt="Pequeñas flores amarillas sobre un fondo verde azulado" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:1.5000;background:#5c5c0a url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAQABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBBAX/xAAkEAACAgEDAgcAAAAAAAAAAAABAgMRAAQFITFBEiIjMmJxkf/EABYBAQEBAAAAAAAAAAAAAAAAAAMEBf/EABkRAAMBAQEAAAAAAAAAAAAAAAABEQMCMf/aAAwDAQACEQMRAD8AoiBNXBGqRKnyPf8AMk7ZTlY5UNdbPtxWn3F40RQoPbxEkmsdJuQVfRjVZSLYtyPrMuapzkW5tVmdKSA9tdcAjphhK4fzSEszNZN8nDLF4Af/2Q==) center/cover">
+        <a href="IMG/20171122_0903124.jpg" data-med="miniaturas/20171122_0903124-1800.jpg" data-w="4608" data-h="3072" data-mb="0.92">
+          <img src="miniaturas/20171122_0903124-900.jpg" srcset="miniaturas/20171122_0903124-900.jpg 900w, miniaturas/20171122_0903124-1800.jpg 1800w" sizes="(max-width: 599px) 90vw, (max-width: 899px) 432px, (max-width: 1299px) 504px, 576px" width="4608" height="3072" alt="Flor amarilla de pétalos alargados entre pasto y hojas" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:0.6667;background:#ebc626 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAYABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAUA/8QAIBAAAgICAgIDAAAAAAAAAAAAAQIDEQASBDETQSEyUf/EABYBAQEBAAAAAAAAAAAAAAAAAAIEBv/EABoRAQEAAgMAAAAAAAAAAAAAAAEAAhESITH/2gAMAwEAAhEDEQA/ALXGfWFfJexHrrFRpqbYfFXk9pFV4grLsQfr1juOwCM73+VeZ3EOXdY+UuPi8YSQyIG0U0RdDHxDWZk22X0azZsLkrplq//Z) center/cover">
+        <a href="IMG/20171122_09031211.jpg" data-med="miniaturas/20171122_09031211-1800.jpg" data-w="4000" data-h="6000" data-mb="4.52">
+          <img src="miniaturas/20171122_09031211-900.jpg" srcset="miniaturas/20171122_09031211-900.jpg 600w, miniaturas/20171122_09031211-1800.jpg 1200w" sizes="(max-width: 599px) 44vw, (max-width: 899px) 192px, (max-width: 1299px) 224px, 256px" width="4000" height="6000" alt="Ramillete de flores amarillas bañadas en luz dorada" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:0.6676;background:#513a01 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAYABADASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAAFBv/EACAQAAICAgICAwAAAAAAAAAAAAECAwQAERIhBVETIjH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABoRAAIDAQEAAAAAAAAAAAAAAAABAgMSESL/2gAMAwEAAhEDEQA/AOVpwJYtCMkhTibNCMVWliDgqewRjfH1IqkrlnVpSPqD0N+sW1llqkz/ABmUHXFSDsZBO578lEa1njMu7afiwRR6JP7gUlcLoHWWWPXFKIVrej//2Q==) center/cover">
+        <a href="IMG/20171122_090311.jpg" data-med="miniaturas/20171122_090311-1800.jpg" data-w="2008" data-h="3008" data-mb="0.75">
+          <img src="miniaturas/20171122_090311-900.jpg" srcset="miniaturas/20171122_090311-900.jpg 601w, miniaturas/20171122_090311-1800.jpg 1202w" sizes="(max-width: 599px) 44vw, (max-width: 899px) 192px, (max-width: 1299px) 224px, 256px" width="2008" height="3008" alt="Flores amarillas de centro café bajo una luz cálida" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:1.5000;background:#495c1c url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAQABgDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABQADBP/EACEQAAICAwABBQEAAAAAAAAAAAECAxEABBIhEyIjQXFR/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAE/8QAGxEAAgIDAQAAAAAAAAAAAAAAAAECIRESMVH/2gAMAwEAAhEDEQA/AC4oQ61smRQpBrkU34c6NnUVZm2IJXjSufkHj8w6LfmiYKeSRV+LrEZNw7uk0TyDg/we4VmOammmuBxVh+7FE/hl9PgAdqh5Jq8s1ifmFxLNGxvkC76H0ayxRlrRN+n/2Q==) center/cover">
+        <a href="IMG/20171122_0903129.jpg" data-med="miniaturas/20171122_0903129-1800.jpg" data-w="5472" data-h="3648" data-mb="3.22">
+          <img src="miniaturas/20171122_0903129-900.jpg" srcset="miniaturas/20171122_0903129-900.jpg 900w, miniaturas/20171122_0903129-1800.jpg 1800w" sizes="(max-width: 599px) 90vw, (max-width: 899px) 432px, (max-width: 1299px) 504px, 576px" width="5472" height="3648" alt="Florecitas amarillas entre hojas verdes" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:0.7142;background:#616529 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAYABEDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIEBQP/xAAoEAACAQIDBwUBAAAAAAAAAAABAgADEQQSIRMUJDFRVJEjMkJhcZL/xAAXAQADAQAAAAAAAAAAAAAAAAACAwQA/8QAHhEAAgEFAAMAAAAAAAAAAAAAAAECAxESE1EiYZH/2gAMAwEAAhEDEQA/AMvd0dwwsUbWykXkGwaNexUkaEjkJc2VDDkua1Ky/G9836BzkF4hy7uMy67MJoQPqSqUjFLck6DzE0d7pdnS/gxB2VOBWXTlRoNjqCAFMqj3Eagy3UetTo8QlJzTW+dhYv1A6GIiHUbq4sJR8LkPS7V/IiIlGqPv6LyZ/9k=) center/cover">
+        <a href="IMG/20171122_0903125.jpg" data-med="miniaturas/20171122_0903125-1800.jpg" data-w="3374" data-h="4724" data-mb="2.06">
+          <img src="miniaturas/20171122_0903125-900.jpg" srcset="miniaturas/20171122_0903125-900.jpg 643w, miniaturas/20171122_0903125-1800.jpg 1286w" sizes="(max-width: 599px) 44vw, (max-width: 899px) 206px, (max-width: 1299px) 240px, 274px" width="3374" height="4724" alt="Flores amarillas entre hojas verdes con fondo suave" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:0.7173;background:#26271a url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAYABEDASIAAhEBAxEB/8QAGQABAQADAQAAAAAAAAAAAAAAAAIBAwQG/8QAJRAAAQMDAgYDAAAAAAAAAAAAAQACAwQREhMiFCExUmGRQXHw/8QAFwEBAQEBAAAAAAAAAAAAAAAAAQIAA//EABcRAQEBAQAAAAAAAAAAAAAAAAARIiH/2gAMAwEAAhEDEQA/APNQaD8+IMoNtgYBzPkqpaWVh0xJG4Y5EsdcDx9rZRNpTUXqngNDbm5tc/AU10kD5QYGYNwGQDrgHwVzuoZmubhz2Seiibe4+yivqUN2gg81JcB09IiQzqD8ERFi/9k=) center/cover">
+        <a href="IMG/20171122_090315.jpg" data-med="miniaturas/20171122_090315-1800.jpg" data-w="2826" data-h="3940" data-mb="1.07">
+          <img src="miniaturas/20171122_090315-900.jpg" srcset="miniaturas/20171122_090315-900.jpg 646w, miniaturas/20171122_090315-1800.jpg 1291w" sizes="(max-width: 599px) 44vw, (max-width: 899px) 207px, (max-width: 1299px) 241px, 275px" width="2826" height="3940" alt="Flores naranjas de centro oscuro entre hojas verdes oscuras" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:1.5000;background:#2b3509 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAQABgDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAECAwb/xAAjEAACAgICAQQDAAAAAAAAAAABAgMEABIRIUEFFCIkUXGR/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAECBP/EABoRAAICAwAAAAAAAAAAAAAAAAABAhESIUH/2gAMAwEAAhEDEQA/AOaowQyWV9xIyxkfIqO/1jFYu5CtpGW1488Y6NmCGz9jZo9eBwPP5zSvd0nE3KllJ1D9/wBzO3K3QuEeoVK8JVYJWkXyxHHeGTcuNZmaRwo27IHWGVDJRVg3s//Z) center/cover">
+        <a href="IMG/20171122_090317.jpg" data-med="miniaturas/20171122_090317-1800.jpg" data-w="5472" data-h="3648" data-mb="2.23">
+          <img src="miniaturas/20171122_090317-900.jpg" srcset="miniaturas/20171122_090317-900.jpg 900w, miniaturas/20171122_090317-1800.jpg 1800w" sizes="(max-width: 599px) 90vw, (max-width: 899px) 432px, (max-width: 1299px) 504px, 576px" width="5472" height="3648" alt="Flores amarillas pequeñas entre hojas oscuras" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:1.4984;background:#41432b url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAQABgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAAF/8QAHhAAAgIDAAMBAAAAAAAAAAAAAQIDEQAEEhQhQTH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAA//EABgRAQEBAQEAAAAAAAAAAAAAAAEAEQIx/9oADAMBAAIRAxEAPwDB1dVJtlVlblCSveLnQazzgpDPY4FCqPwisNruSFBoD2B7xcqweKvEzGdie0JqhkejU2DZMoYOVcEN9vLEmGjbueiP28sqeS//2Q==) center/cover">
+        <a href="IMG/20171122_0903122.jpg" data-med="miniaturas/20171122_0903122-1800.jpg" data-w="3680" data-h="2456" data-mb="0.53">
+          <img src="miniaturas/20171122_0903122-900.jpg" srcset="miniaturas/20171122_0903122-900.jpg 900w, miniaturas/20171122_0903122-1800.jpg 1800w" sizes="(max-width: 599px) 90vw, (max-width: 899px) 432px, (max-width: 1299px) 503px, 575px" width="3680" height="2456" alt="Margaritas amarillas de pétalos finos sobre un fondo verde grisáceo" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:1.5056;background:#7a8d3f url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAQABgDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgUG/8QAJBAAAgEDAwMFAAAAAAAAAAAAAQIDABESBBMhIlGhBTFCYdH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAgX/xAAbEQACAwADAAAAAAAAAAAAAAABAgADESEiMf/aAAwDAQACEQMRAD8An05xvIqnG3Az5NaOogl2WsyuOepeGXteueMjCQYdLg3FvHmntHr5tMm1PGsjMb5N8r96z7amLB15gtgwgy24dPMs2RdkUjqPuPuilw7SS5HBRfjtf8oqnqpY9hFXOez/2Q==) center/cover">
+        <a href="IMG/20171122_091.jpg" data-med="miniaturas/20171122_091-1800.jpg" data-w="4288" data-h="2848" data-mb="0.48">
+          <img src="miniaturas/20171122_091-900.jpg" srcset="miniaturas/20171122_091-900.jpg 900w, miniaturas/20171122_091-1800.jpg 1800w" sizes="(max-width: 599px) 90vw, (max-width: 899px) 434px, (max-width: 1299px) 506px, 578px" width="4288" height="2848" alt="Flor amarilla clara sobre un fondo suave" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="foto" style="--ar:1.5002;background:#625b2e url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wAARCAAQABgDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUDBAb/xAAjEAABBAEDBAMAAAAAAAAAAAABAgMEEQASEzEFIUFRIiOx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAaEQACAgMAAAAAAAAAAAAAAAAAAQISESEx/9oADAMBAAIRAxEAPwAnyIjklDzyyNqR8K72aHOW4rbEeWH9RLteOCKzJKLOwXCoB5SiRVkj1jJzqzjbQSpr7hWpahdD9yKd7ZixNcIOsT1uT3u5A1cesMXPHcWolWpRNknzhlaYZ//Z) center/cover">
+        <a href="IMG/20171122_0903128.JPG" data-med="miniaturas/20171122_0903128-1800.jpg" data-w="4898" data-h="3265" data-mb="0.51">
+          <img src="miniaturas/20171122_0903128-900.jpg" srcset="miniaturas/20171122_0903128-900.jpg 900w, miniaturas/20171122_0903128-1800.jpg 1800w" sizes="(max-width: 599px) 90vw, (max-width: 899px) 432px, (max-width: 1299px) 504px, 576px" width="4898" height="3265" alt="Flores de amarillo pálido con el fondo desenfocado" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <!-- GALERIA:FIN -->
+    </ul>
+  </section>
+</main>
+
+<footer class="cierre">
+  <p class="cierre-titulo">Feliz 21 de septiembre.</p>
+  <div class="cierre-lado">
+    <svg class="flor grande" aria-hidden="true"><use href="#flor"/></svg>
+    <p class="cierre-texto">Como todos los años, estas flores son para ti.</p>
+    <p class="firma">con cariño<small data-de hidden></small></p>
+  </div>
+</footer>
+
+<!-- Visor: abre cada foto en su calidad original -->
+<dialog class="visor" id="visor" aria-label="Visor de fotos">
+  <div class="visor-barra">
+    <p class="visor-cuenta"><b id="v-n">1</b> / <span data-total>29</span></p>
+    <div class="visor-acciones">
+      <a class="boton descargar" id="v-descarga" href="#" download aria-label="Descargar la foto original">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>
+        <span class="texto">Descargar</span>
+      </a>
+      <button class="boton solo-icono" id="v-cerrar" type="button" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="visor-escena" id="v-escena">
+    <img id="v-img" alt="" decoding="async" draggable="false">
+  </div>
+  <button class="boton solo-icono flecha prev" id="v-prev" type="button" aria-label="Foto anterior">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="boton solo-icono flecha next" id="v-next" type="button" aria-label="Foto siguiente">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+
+  <div class="visor-pie" id="v-pie">
+    <span class="visor-carga" aria-hidden="true"></span>
+    <p class="visor-estado" id="v-estado" data-estado="cargando"></p>
+  </div>
+  <p class="solo-lector" id="v-anuncio" role="status"></p>
+</dialog>
+
+<script>
+(() => {
+  "use strict";
+
+  /* ---------- Ajustes que puedes tocar ---------- */
+  const DE = "";   // tu nombre para la firma (opcional). Ejemplo: "Pablo"
+
+  const $  = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+  const reducir = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const nf = new Intl.NumberFormat("es", { maximumFractionDigits: 1, minimumFractionDigits: 1 });
+
+  /* ---------- Personalizar: ?para=Nombre ---------- */
+  try {
+    const p = new URLSearchParams(location.search).get("para");
+    const nombre = p ? p.replace(/\s+/g, " ").trim().slice(0, 40) : "";
+    if (nombre) {
+      $("#para").textContent = nombre;
+      document.title = "Flores amarillas para " + nombre + " · 21 de septiembre";
+    }
+  } catch (e) { /* sin personalizar */ }
+  if (DE) $$("[data-de]").forEach(d => { d.textContent = DE; d.hidden = false; });
+
+  /* ---------- Galería: filas parejas ---------- */
+  const galeria = $(".galeria");
+  const fotos = $$(".foto", galeria);
+  const enlaces = fotos.map(li => $("a", li));
+  const razon = enlaces.map(a => (+a.dataset.w) / (+a.dataset.h) || 1);
+  const n = fotos.length;
+  let anchoAntes = 0;
+
+  function armar() {
+    const W = Math.floor(galeria.clientWidth);
+    if (!W || !n) return;
+    anchoAntes = W;
+    const g = parseFloat(getComputedStyle(galeria).columnGap) || 8;
+    const T = W < 600 ? 240 : Math.max(210, Math.min(340, W * 0.22));   // altura ideal de fila
+
+    // Reparto óptimo de fotos por fila (programación dinámica)
+    const mejor = new Array(n + 1).fill(Infinity), previo = new Array(n + 1).fill(0);
+    mejor[0] = 0;
+    for (let j = 1; j <= n; j++) {
+      let suma = 0;
+      for (let i = j - 1; i >= 0 && j - i <= 8; i--) {
+        suma += razon[i];
+        const H = (W - (j - i - 1) * g) / suma;
+        let costo = ((H - T) / T) ** 2;
+        if (j === n && H > T) costo = 0;          // la última fila puede quedar corta
+        if (H > T * 2) costo += 6;                 // evita filas enormes
+        if (mejor[i] + costo < mejor[j]) { mejor[j] = mejor[i] + costo; previo[j] = i; }
+      }
+    }
+    const filas = [];
+    for (let j = n; j > 0; j = previo[j]) filas.unshift([previo[j], j]);
+
+    $$(".salto", galeria).forEach(e => e.remove());
+    filas.forEach(([i, j], k) => {
+      const suma = razon.slice(i, j).reduce((a, b) => a + b, 0);
+      let H = (W - (j - i - 1) * g) / suma;
+      const estirar = !(k === filas.length - 1 && H > T * 1.05);
+      if (!estirar) H = T;
+      for (let m = i; m < j; m++) {
+        const li = fotos[m];
+        li.style.height = H.toFixed(2) + "px";
+        if (estirar) { li.style.flex = razon[m] + " 1 0"; li.style.width = ""; }
+        else { li.style.flex = "0 0 auto"; li.style.width = (razon[m] * H).toFixed(2) + "px"; }
+      }
+      if (i > 0) {
+        const s = document.createElement("li");
+        s.className = "salto"; s.setAttribute("aria-hidden", "true");
+        galeria.insertBefore(s, fotos[i]);
+      }
+    });
+  }
+
+  try { armar(); } catch (e) { console.error(e); }
+  galeria.classList.add("lista");                     // (si algo fallara, igual se muestra)
+  if ("ResizeObserver" in window) {
+    let pendiente = 0;
+    new ResizeObserver(() => {
+      if (Math.abs(Math.floor(galeria.clientWidth) - anchoAntes) < 1) return;
+      cancelAnimationFrame(pendiente);
+      pendiente = requestAnimationFrame(() => { try { armar(); } catch (e) { console.error(e); } });
+    }).observe(galeria);
+  }
+
+  $$("img", galeria).forEach(img => {
+    const lista = () => img.classList.add("cargada");
+    if (img.complete && img.naturalWidth) lista();
+    else { img.addEventListener("load", lista, { once: true }); img.addEventListener("error", lista, { once: true }); }
+  });
+
+  /* ---------- Visor ---------- */
+  const visor = $("#visor"), escena = $("#v-escena"), vimg = $("#v-img"), pie = $("#v-pie");
+  const vn = $("#v-n"), vdesc = $("#v-descarga"), vestado = $("#v-estado"), vanuncio = $("#v-anuncio");
+  const html = document.documentElement;
+  let actual = -1, ampliada = false, origenListo = false, grande = null, ficha = 0;
+  let empujado = false, lanzador = null, callarClicHasta = 0;
+
+  const datos = i => {
+    const a = enlaces[i], href = a.getAttribute("href");
+    return { orig: href, med: a.dataset.med, w: +a.dataset.w, h: +a.dataset.h, mb: +a.dataset.mb,
+             alt: $("img", a).alt, nombre: href.split("/").pop() };
+  };
+  const estado = (tipo, d) => {
+    vestado.dataset.estado = tipo;
+    pie.toggleAttribute("data-cargando", tipo === "cargando");
+    vestado.textContent =
+      tipo === "cargando" ? "Cargando la calidad original…" :
+      tipo === "original" ? "Calidad original · " + d.w + " × " + d.h + " px · " + nf.format(d.mb) + " MB" :
+      "No se pudo cargar el original. Prueba con Descargar.";
+  };
+  const precargar = i => { const p = new Image(); p.src = datos((i + n) % n).med; };
+
+  function mostrar(i) {
+    actual = (i + n) % n;
+    const d = datos(actual), id = ++ficha;
+    salirAmpliar();
+    origenListo = false;
+    escena.classList.add("sin-zoom");
+    if (grande) { grande.onload = grande.onerror = null; grande.src = ""; grande = null; }
+
+    vimg.alt = d.alt;
+    vimg.src = d.med;                                   // versión ligera: aparece al instante
+    vimg.classList.remove("nueva"); void vimg.offsetWidth; vimg.classList.add("nueva");
+    vn.textContent = actual + 1;
+    vdesc.href = d.orig; vdesc.setAttribute("download", d.nombre);
+    vanuncio.textContent = "Foto " + (actual + 1) + " de " + n + ": " + d.alt;
+    estado("cargando", d);
+
+    const big = grande = new Image();                   // …y enseguida el original completo
+    big.decoding = "async";
+    big.src = d.orig;
+    const listo = big.decode ? big.decode() : new Promise((ok, no) => { big.onload = ok; big.onerror = no; });
+    listo.then(() => {
+      if (id !== ficha) return;
+      vimg.src = d.orig; origenListo = true;
+      escena.classList.remove("sin-zoom");
+      estado("original", d);
+    }).catch(() => { if (id === ficha) estado("error", d); });
+
+    precargar(actual + 1); precargar(actual - 1);
+  }
+
+  function abrir(i) {
+    lanzador = document.activeElement;
+    html.classList.add("visor-abierto");
+    visor.showModal();
+    mostrar(i);
+    try { history.pushState({ visor: 1 }, ""); empujado = true; } catch (e) { empujado = false; }
+  }
+  const cerrar = () => { if (visor.open) visor.close(); };
+  const ir = paso => mostrar(actual + paso);
+
+  visor.addEventListener("close", () => {
+    html.classList.remove("visor-abierto");
+    salirAmpliar();
+    ficha++;
+    if (grande) { grande.onload = grande.onerror = null; grande.src = ""; grande = null; }
+    if (empujado) { empujado = false; try { history.back(); } catch (e) {} }
+    const a = enlaces[actual] || lanzador;              // se vuelve a la última foto vista
+    if (a) { a.focus({ preventScroll: true }); a.scrollIntoView({ block: "nearest" }); }
+  });
+  window.addEventListener("popstate", () => { if (visor.open) { empujado = false; visor.close(); } });
+  visor.addEventListener("cancel", e => { if (ampliada) { e.preventDefault(); salirAmpliar(); } });
+
+  // Ampliar al 100 % (un píxel de la foto = un píxel de la pantalla)
+  function encajada() {
+    const r = escena.getBoundingClientRect(), d = datos(actual);
+    const k = Math.min(r.width / d.w, r.height / d.h), w = d.w * k, h = d.h * k;
+    return { x: r.left + (r.width - w) / 2, y: r.top + (r.height - h) / 2, w, h };
+  }
+  function ampliar(cx, cy) {
+    if (!origenListo) return;
+    const d = datos(actual), dpr = window.devicePixelRatio || 1, f = encajada();
+    const zw = d.w / dpr, zh = d.h / dpr;
+    if (zw <= f.w * 1.05) return;
+    const fx = Math.min(1, Math.max(0, (cx - f.x) / f.w)), fy = Math.min(1, Math.max(0, (cy - f.y) / f.h));
+    escena.style.setProperty("--zw", zw + "px");
+    escena.style.setProperty("--zh", zh + "px");
+    escena.classList.add("ampliada");
+    ampliada = true;
+    escena.scrollLeft = fx * zw - escena.clientWidth / 2;
+    escena.scrollTop = fy * zh - escena.clientHeight / 2;
+  }
+  function salirAmpliar() {
+    if (!ampliada) return;
+    escena.classList.remove("ampliada", "arrastrando");
+    ampliada = false;
+    escena.scrollLeft = escena.scrollTop = 0;
+  }
+
+  escena.addEventListener("click", e => {
+    if (performance.now() < callarClicHasta) return;
+    if (ampliada) { salirAmpliar(); return; }
+    const f = encajada();
+    const dentro = e.clientX >= f.x && e.clientX <= f.x + f.w && e.clientY >= f.y && e.clientY <= f.y + f.h;
+    if (dentro) ampliar(e.clientX, e.clientY); else cerrar();
+  });
+
+  let arrastre = null, toque = null;
+  escena.addEventListener("pointerdown", e => {
+    if (e.pointerType === "mouse" && ampliada && e.button === 0) {
+      arrastre = { x: e.clientX, y: e.clientY, sl: escena.scrollLeft, st: escena.scrollTop, movido: false };
+      escena.setPointerCapture(e.pointerId);
+    } else if (e.pointerType === "touch" && !ampliada && e.isPrimary) {
+      toque = { x: e.clientX, y: e.clientY };
+    }
+  });
+  escena.addEventListener("pointermove", e => {
+    if (!arrastre) return;
+    const dx = e.clientX - arrastre.x, dy = e.clientY - arrastre.y;
+    if (Math.abs(dx) + Math.abs(dy) > 4) { arrastre.movido = true; escena.classList.add("arrastrando"); }
+    escena.scrollLeft = arrastre.sl - dx; escena.scrollTop = arrastre.st - dy;
+  });
+  const soltar = e => {
+    if (arrastre) {
+      if (arrastre.movido) callarClicHasta = performance.now() + 350;
+      escena.classList.remove("arrastrando");
+      arrastre = null;
+    }
+    if (toque && e.type === "pointerup") {
+      const dx = e.clientX - toque.x, dy = e.clientY - toque.y;
+      if (!ampliada && Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.4) {
+        callarClicHasta = performance.now() + 350;
+        ir(dx < 0 ? 1 : -1);
+      }
+    }
+    toque = null;
+  };
+  escena.addEventListener("pointerup", soltar);
+  escena.addEventListener("pointercancel", soltar);
+
+  visor.addEventListener("keydown", e => {
+    if (e.key === "ArrowRight") { ir(1); e.preventDefault(); }
+    else if (e.key === "ArrowLeft") { ir(-1); e.preventDefault(); }
+    else if (e.key === "Home") { mostrar(0); e.preventDefault(); }
+    else if (e.key === "End") { mostrar(n - 1); e.preventDefault(); }
+  });
+  $("#v-prev").addEventListener("click", () => ir(-1));
+  $("#v-next").addEventListener("click", () => ir(1));
+  $("#v-cerrar").addEventListener("click", cerrar);
+  $(".visor-barra").addEventListener("click", e => { if (e.target === e.currentTarget) cerrar(); });
+
+  galeria.addEventListener("click", e => {
+    const a = e.target.closest("a");
+    if (!a || !galeria.contains(a) || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    if (typeof visor.showModal !== "function") return;   // navegador antiguo: se abre la foto original tal cual
+    e.preventDefault();
+    abrir(enlaces.indexOf(a));
+  });
+
+  /* ---------- Pétalos cayendo en la portada ---------- */
+  const lienzo = $(".petalos"), portada = $(".portada");
+  if (lienzo && lienzo.getContext) {
+    const ctx = lienzo.getContext("2d");
+    const COLORES = ["#ffc61a", "#ffd54a", "#ffe58f", "#f79a2e", "#ffb300"];
+    const rnd = (a, b) => a + Math.random() * (b - a);
+    let W = 0, H = 0, petalos = [], raf = 0, ultimo = 0, visible = true;
+
+    const nuevo = (repartido) => {
+      const z = Math.random();                        // 0 = lejos, 1 = cerca
+      return {
+        x: rnd(0, W), y: repartido ? rnd(-20, H) : rnd(-80, -20),
+        s: 5 + z * 13, vy: 16 + z * 34, amp: rnd(10, 38), fs: rnd(.4, 1.1), fase: rnd(0, 6.28),
+        ang: rnd(0, 6.28), giro: rnd(-1, 1), fv: rnd(0, 6.28), volteo: rnd(.8, 2.4),
+        a: .3 + z * .6, c: COLORES[(Math.random() * COLORES.length) | 0], x0: 0
+      };
+    };
+    function medir() {
+      const r = portada.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = r.width; H = r.height;
+      lienzo.width = Math.round(W * dpr); lienzo.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const cuantos = Math.round(Math.min(24, Math.max(9, W / 60)));
+      petalos = Array.from({ length: cuantos }, () => nuevo(true)).sort((a, b) => a.s - b.s);
+      petalos.forEach(p => { p.x0 = p.x; });
+    }
+    function petalo(p) {
+      const L = p.s * 2, A = p.s * .95;
+      ctx.save();
+      ctx.translate(p.x0 + Math.sin(p.fase) * p.amp, p.y);
+      ctx.rotate(p.ang);
+      ctx.scale(Math.max(.22, Math.abs(Math.cos(p.fv))), 1);
+      ctx.globalAlpha = p.a;
+      ctx.fillStyle = p.c;
+      ctx.beginPath();
+      ctx.moveTo(0, L);
+      ctx.bezierCurveTo(A * 1.35, L * .3, A * 1.15, -L * .95, 0, -L);
+      ctx.bezierCurveTo(-A * 1.15, -L * .95, -A * 1.35, L * .3, 0, L);
+      ctx.fill();
+      if (p.s > 12) {                                  // nervadura en los pétalos cercanos
+        ctx.globalAlpha = p.a * .35; ctx.strokeStyle = "#fff8d6"; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(0, L * .8); ctx.lineTo(0, -L * .7); ctx.stroke();
+      }
+      ctx.restore();
+    }
+    function cuadro(t) {
+      raf = 0;
+      const dt = Math.min(.05, ((t - ultimo) / 1000) || .016); ultimo = t;
+      ctx.clearRect(0, 0, W, H);
+      for (const p of petalos) {
+        p.y += p.vy * dt; p.fase += p.fs * dt; p.ang += p.giro * dt; p.fv += p.volteo * dt;
+        if (p.y > H + 40) { Object.assign(p, nuevo(false)); p.x0 = p.x; }
+        petalo(p);
+      }
+      if (visible && !document.hidden) raf = requestAnimationFrame(cuadro);
+    }
+    function arrancar() { if (!raf && !reducir) { ultimo = performance.now(); raf = requestAnimationFrame(cuadro); } }
+
+    medir();
+    if (reducir) { petalos.forEach(petalo); }         // una imagen fija, sin movimiento
+    else {
+      arrancar();
+      if ("IntersectionObserver" in window)
+        new IntersectionObserver(([en]) => { visible = en.isIntersecting; if (visible) arrancar(); }).observe(portada);
+      document.addEventListener("visibilitychange", () => { if (!document.hidden) arrancar(); });
+    }
+    let t = 0;
+    addEventListener("resize", () => { clearTimeout(t); t = setTimeout(() => { medir(); if (reducir) petalos.forEach(petalo); }, 200); });
+  }
+})();
+</script>
+</body>
+</html>
